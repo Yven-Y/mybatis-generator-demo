@@ -83,17 +83,17 @@
         </table>
         <!--tableName表名，domainObjectName生成Java类的类名，enableCountByExample是否可以通过对象查数量,其他类似-->
         <!--多个表时写多个table标签即可-->
-        <table tableName="hotel_access_permission" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />
-        </table>
+<!--        <table tableName="hotel_access_permission" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />-->
+<!--        </table>-->
 
-        <table tableName="hotel_access_permission_user_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />
-        </table>
+<!--        <table tableName="hotel_access_permission_user_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />-->
+<!--        </table>-->
 
-        <table tableName="hotel_access_permission_device_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />
-        </table>
+<!--        <table tableName="hotel_access_permission_device_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />-->
+<!--        </table>-->
 
         <!-- geelynote mybatis插件的搭建 -->
     </context>
