@@ -5,7 +5,7 @@
 
 ### 步骤二
 运行插件
-![image](http://github.com/your_name/your_repository/raw/master/images/mybatis-generator-plugin-run.png)
+![image](https://github.com/Yven-Y/mybatis-generator-demo/tree/master/images/mybatis-generator-plugin-run.png)
 
 ---
 
