@@ -6,7 +6,7 @@
 ### 步骤二
 运行插件
 
-![image](https://github.com/Yven-Y/mybatis-generator-demo/tree/master/images/mybatis-generator-plugin-run.jpg)
+![image](https://github.com/Yven-Y/mybatis-generator-demo/blob/master/images/mybatis-generator-plugin-run.jpg)
 
 ---
 
