@@ -11,17 +11,6 @@ public class Student {
 
     private LocalDateTime createTime;
 
-    public Student(Integer id, String name, Byte gender, LocalDateTime createTime) {
-        this.id = id;
-        this.name = name;
-        this.gender = gender;
-        this.createTime = createTime;
-    }
-
-    public Student() {
-        super();
-    }
-
     public Integer getId() {
         return id;
     }

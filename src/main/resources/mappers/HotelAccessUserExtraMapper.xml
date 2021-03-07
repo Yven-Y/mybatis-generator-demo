@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generator.demo.dao.HotelAccessUserExtraMapper">
+  <resultMap id="BaseResultMap" type="com.generator.demo.entity.HotelAccessUserExtra">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="project_id" jdbcType="VARCHAR" property="projectId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="device_id" jdbcType="BIGINT" property="deviceId" />
+    <result column="access_type" jdbcType="TINYINT" property="accessType" />
+    <result column="access_id" jdbcType="BIGINT" property="accessId" />
+    <result column="image_info" jdbcType="VARCHAR" property="imageInfo" />
+    <result column="card_info" jdbcType="VARCHAR" property="cardInfo" />
+    <result column="begin_time" jdbcType="BIGINT" property="beginTime" />
+    <result column="end_time" jdbcType="BIGINT" property="endTime" />
+    <result column="env" jdbcType="VARCHAR" property="env" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="modifier" jdbcType="VARCHAR" property="modifier" />
+    <result column="gmt_create" jdbcType="BIGINT" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="BIGINT" property="gmtModified" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, project_id, user_id, device_id, access_type, access_id, image_info, card_info, 
+    begin_time, end_time, env, status, creator, modifier, gmt_create, gmt_modified
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from hotel_access_user_extra
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from hotel_access_user_extra
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.generator.demo.entity.HotelAccessUserExtra">
+    insert into hotel_access_user_extra (id, project_id, user_id, 
+      device_id, access_type, access_id, 
+      image_info, card_info, begin_time, 
+      end_time, env, status, 
+      creator, modifier, gmt_create, 
+      gmt_modified)
+    values (#{id,jdbcType=BIGINT}, #{projectId,jdbcType=VARCHAR}, #{userId,jdbcType=BIGINT}, 
+      #{deviceId,jdbcType=BIGINT}, #{accessType,jdbcType=TINYINT}, #{accessId,jdbcType=BIGINT}, 
+      #{imageInfo,jdbcType=VARCHAR}, #{cardInfo,jdbcType=VARCHAR}, #{beginTime,jdbcType=BIGINT}, 
+      #{endTime,jdbcType=BIGINT}, #{env,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{creator,jdbcType=VARCHAR}, #{modifier,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=BIGINT}, 
+      #{gmtModified,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.generator.demo.entity.HotelAccessUserExtra">
+    insert into hotel_access_user_extra
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="projectId != null">
+        project_id,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="deviceId != null">
+        device_id,
+      </if>
+      <if test="accessType != null">
+        access_type,
+      </if>
+      <if test="accessId != null">
+        access_id,
+      </if>
+      <if test="imageInfo != null">
+        image_info,
+      </if>
+      <if test="cardInfo != null">
+        card_info,
+      </if>
+      <if test="beginTime != null">
+        begin_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="env != null">
+        env,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="creator != null">
+        creator,
+      </if>
+      <if test="modifier != null">
+        modifier,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="projectId != null">
+        #{projectId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=BIGINT},
+      </if>
+      <if test="accessType != null">
+        #{accessType,jdbcType=TINYINT},
+      </if>
+      <if test="accessId != null">
+        #{accessId,jdbcType=BIGINT},
+      </if>
+      <if test="imageInfo != null">
+        #{imageInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="cardInfo != null">
+        #{cardInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null">
+        #{beginTime,jdbcType=BIGINT},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=BIGINT},
+      </if>
+      <if test="env != null">
+        #{env,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="modifier != null">
+        #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=BIGINT},
+      </if>
+      <if test="gmtModified != null">
+        #{gmtModified,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.generator.demo.entity.HotelAccessUserExtra">
+    update hotel_access_user_extra
+    <set>
+      <if test="projectId != null">
+        project_id = #{projectId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=BIGINT},
+      </if>
+      <if test="accessType != null">
+        access_type = #{accessType,jdbcType=TINYINT},
+      </if>
+      <if test="accessId != null">
+        access_id = #{accessId,jdbcType=BIGINT},
+      </if>
+      <if test="imageInfo != null">
+        image_info = #{imageInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="cardInfo != null">
+        card_info = #{cardInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null">
+        begin_time = #{beginTime,jdbcType=BIGINT},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=BIGINT},
+      </if>
+      <if test="env != null">
+        env = #{env,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="creator != null">
+        creator = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="modifier != null">
+        modifier = #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=BIGINT},
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified = #{gmtModified,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.generator.demo.entity.HotelAccessUserExtra">
+    update hotel_access_user_extra
+    set project_id = #{projectId,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=BIGINT},
+      device_id = #{deviceId,jdbcType=BIGINT},
+      access_type = #{accessType,jdbcType=TINYINT},
+      access_id = #{accessId,jdbcType=BIGINT},
+      image_info = #{imageInfo,jdbcType=VARCHAR},
+      card_info = #{cardInfo,jdbcType=VARCHAR},
+      begin_time = #{beginTime,jdbcType=BIGINT},
+      end_time = #{endTime,jdbcType=BIGINT},
+      env = #{env,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      creator = #{creator,jdbcType=VARCHAR},
+      modifier = #{modifier,jdbcType=VARCHAR},
+      gmt_create = #{gmtCreate,jdbcType=BIGINT},
+      gmt_modified = #{gmtModified,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

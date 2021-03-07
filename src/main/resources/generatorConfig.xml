@@ -49,7 +49,7 @@
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
             <property name="enableSubPackages" value="false"/>
             <!-- 是否对model添加 构造函数 -->
-            <property name="constructorBased" value="true"/>
+            <property name="constructorBased" value="false"/>
             <!-- 是否对类CHAR类型的列的数据进行trim操作 -->
             <property name="trimStrings" value="true"/>
             <!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 -->
@@ -83,17 +83,26 @@
         </table>
         <!--tableName表名，domainObjectName生成Java类的类名，enableCountByExample是否可以通过对象查数量,其他类似-->
         <!--多个表时写多个table标签即可-->
-<!--        <table tableName="hotel_access_permission" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <table tableName="hotel_access_permission" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 <!--            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />-->
-<!--        </table>-->
+        </table>
 
-<!--        <table tableName="hotel_access_permission_user_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <table tableName="hotel_access_permission_user_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 <!--            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />-->
-<!--        </table>-->
+        </table>
 
-<!--        <table tableName="hotel_access_permission_device_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <table tableName="hotel_access_permission_device_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 <!--            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />-->
-<!--        </table>-->
+        </table>
+
+        <table tableName="hotel_access_user_extra" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+
+        <table tableName="hotel_access_permissionus_user_device_rela" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+
+        <table tableName="hotel_access_record" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
 
         <!-- geelynote mybatis插件的搭建 -->
     </context>
